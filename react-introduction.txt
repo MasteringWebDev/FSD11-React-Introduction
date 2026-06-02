@@ -56,8 +56,19 @@
   - Folder overview:
     - index.html: Main HTML file of the application
 
-    - node_modules:
-      
+    - src: Source code of the React application
+      - assets: Images and other static resources
+      - App.jsx: Root component of the application
+      - App.css: Styles related to App component
+      - main.jsx: 
+        - Entry point of the React application
+        - Renders React appliation into the root element
+      - index.css: Global styles
+
+    - package.json: Metadata and dependency information of the project
+
+    - node_modules: Dependency folders and files
+    - public: Everything here is public and can be accessed by / file-name.ext
 
   ---------------------------------------------
   - Components:
@@ -66,4 +77,29 @@
     - Features:
       - Can be reused
       - Can be nested
+    - Naming convention: PascalCase
+      - Good practice: Keep filename and ComponentName the same
+    - Components should return "JSX"
+    - Function component syntax:
+      function Component1() {
+        return (
+          <h1>Component 1</h1>
+        )
+      }
+    - To use a component in another file
+      - Import the component
+      - Syntax:
+        <Component1 />
+        <Component1></Component1>
+
+    - JSX:
+      - JavaScript XML Syntax
+      - Allows writing HTML-like syntax inside JavaScript
+      - Gets converted into JavaScript by React toolings
+      - Rules:
+        - Use className instead of class
+          <div className='test'></div>
+        - Self-closing tags either requires / in the end, or a closing tag
+          <img />
+          <img></img>
 
