@@ -31,9 +31,13 @@
       - Verify:
         - node -v
         - npm -v
+
+      - Why Node.js?
+        - React runs in the browser
+        - Node.js is required to run development tools such as Vite and NPM
       
     2. Use Vite to create a new React project
-       - Vite: A tool that helps 
+       - Vite: A frontend build tool that helps
         - Create react project
         - Start development server
         - Convert JSX into JavaScript
@@ -77,15 +81,16 @@
     - Features:
       - Can be reused
       - Can be nested
-    - Naming convention: PascalCase
-      - Good practice: Keep filename and ComponentName the same
-    - Components should return "JSX"
     - Function component syntax:
       function Component1() {
         return (
           <h1>Component 1</h1>
         )
       }
+      export default Component1
+      - Naming convention: PascalCase
+      - Good practice: Keep filename and ComponentName same
+    - Components should return "JSX"
     - To use a component in another file
       - Import the component
       - Syntax:
@@ -95,11 +100,11 @@
     - JSX:
       - JavaScript XML Syntax
       - Allows writing HTML-like syntax inside JavaScript
-      - Gets converted into JavaScript by React toolings
+      - Gets converted into JavaScript by React tooling
       - Rules:
         - Use className instead of class
           <div className='test'></div>
-        - Self-closing tags either requires / in the end, or a closing tag
+        - Self-closing tags either require / in the end, or a closing tag
           <img />
           <img></img>
 
