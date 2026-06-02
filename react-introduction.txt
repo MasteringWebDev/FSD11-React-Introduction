@@ -1,0 +1,69 @@
+# React 
+  - A JavaScript library used to build UI (User interfaces)
+  - A webpage is built using multiple "components"
+  - Introduced by Facebook (Meta) in 2013
+  - Documentation: https://react.dev/
+
+  - Declarative Library
+    - We describe what the UI should look like
+    - React figures out how to "update the DOM efficiently"
+  
+  - React efficiently updates the UI
+    - Virtual DOM: Lightweight JS representation of the Real DOM
+      - Diffing: Comparing the old Virtual DOM with the new Virtual DOM to identify the changes
+      - Reconciliation: React compares changes and updates the Real DOM efficiently
+      - Reference image: https://media.geeksforgeeks.org/wp-content/uploads/20241228111254637293/Diffing-Algorithm.jpg
+
+  - SPAs (Single Page Application)
+    - Browser loads a "single HTML file"
+    - React updates the UI without full page reload
+    - Reference image: https://www.hestabit.com/blog/wp-content/uploads/2021/08/re-create-1024x536.jpg
+
+  ---------------------------------------------
+  - Setup
+    1. Download Node.js 
+      - https://nodejs.org/en/download
+
+      - NPM (Node Package Manager)
+        - Used to install React and other libraries
+        - https://www.npmjs.com/
+      
+      - Verify:
+        - node -v
+        - npm -v
+      
+    2. Use Vite to create a new React project
+       - Vite: A tool that helps 
+        - Create react project
+        - Start development server
+        - Convert JSX into JavaScript
+        - Documentation: https://vite.dev/
+
+      - Command: npm create vite@latest
+        - Project: react-intro
+        - Framework: React
+        - Variant: JavaScript
+        - First time:
+          - Start development server right after install
+        - Second time and onwards:
+          - cd react-intro: Enter the project folder
+          - npm install: Install dependencies
+          - npm run dev: Start the application
+
+      - Automatically recompiles code when files change
+
+  ---------------------------------------------
+  - Folder overview:
+    - index.html: Main HTML file of the application
+
+    - node_modules:
+      
+
+  ---------------------------------------------
+  - Components:
+    - Building block for React application
+    - Small reusable pieces of UI
+    - Features:
+      - Can be reused
+      - Can be nested
+
