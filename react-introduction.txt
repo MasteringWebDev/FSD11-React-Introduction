@@ -107,4 +107,98 @@
         - Self-closing tags either require / in the end, or a closing tag
           <img />
           <img></img>
+        - Use {} to display variables/expressions
+          - Eg.: <h1>{name}</h1>
+          - true, false, null, undefined do not render anything
+          - Comment: {/* */}
 
+    - Style in React.js
+      1. Create an external .css file and import this file in the component file
+      2. Create a style object with properties and values and assign it to 'style' prop
+
+    - Props ***:
+      - Makes components dynamic
+      - Data passed from the parent component to child component (One way data flow)
+
+      - Pass from parent component:
+        <Child1 prop1={value1} prop2={value2} />
+
+      - Accept prop in child component
+      function Child({ prop1, prop2 }) {
+        return (
+          <h1>Child</h1>
+          <p>{prop1}</p>
+          <p>{prop2}</p>
+        )
+      }
+
+    - Conditional Rendering ***:
+      - Displaying different UI based on a condition
+      - Using Logical AND (&&) ***
+        {isPremium && (<h1>Premium User</h1>)}
+        - Use this when JSX needs to be shown only when condition is true
+      - Using Ternary Operator ***
+        {isPremium 
+          ? (<h1>Premium User</h1>)
+          : (<h1>Non-Premium User</h1>)
+        }
+        - Use this when two possible JSX outputs need to be shown for true/false
+      - if else
+        - Use this when two possible "large UI channges JSX" need to be shown for true/false
+
+    - Rendering Lists ***
+      - Display multiple elements from an array
+      - Usually done using map()
+        - Iterated through array
+        - Creates JSX for every element
+        - Returns a new array (Array of JSX elements)
+      - Syntax:
+        {arr.map((element, index) => (
+          <h1 key={index}>{element}</h1>
+        ))}
+      - Ensure each child has a unique 'key'
+        - React requires a unique key for each rendered element
+          - Helps react identify elements uniquely
+          - Improves reconciliation performance
+
+    - Render: React executes the component function and determines what UI should be displayed (JSX -> HTML + loaded in the broswer)
+
+    - React component can have 2 types of data ***:
+      1. Props: Data received from the Parent component
+      2. State: Data belonging to that component
+      - Rules:
+        - Component re-renders whenever there is any change in props/state
+        - State value should only be updated using its stateHandler
+
+    - Event Handling: Responding to user actions
+      - Example
+        function handleClick() {
+          console.log('This was clicked')
+        }
+        <button onClick={handleClick}>Click Me</button>
+      - Event handler changes in React JSX:
+        - Even handler should be in camelCase (onClick)
+        - {} instead of ""
+        - Function reference instead of Function call
+      - If argument needs to be passed
+        - Use a callback
+        - Example:
+          function handleClick() {
+            console.log('This was clicked')
+          }
+          <button onClick={() => handleClick(1)}>Click Me</button>
+      
+    - State ***:
+      - Data owned by a component
+      - Used when data changes over time
+      - Updating state causes component re-render
+
+      - To create a state, 'useState' hook is used (Import this from 'react')
+      - Syntax: const [state, stateHandler] = useState(defaultValue)
+        - State value should only be updated using its stateHandler
+        - state: Component's own data
+        - stateHandler: Function used to update state
+        - defaultValue: Default value for the state
+      - Rules:
+        - Never update the state directly (use stateHandler)
+        - Component re-renders on state changes automatically if done using stateHandler
