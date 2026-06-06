@@ -102,6 +102,8 @@
       - Allows writing HTML-like syntax inside JavaScript
       - Gets converted into JavaScript by React tooling
       - Rules:
+        - Should have one parent element
+          - Can use <></> (React fragments) to wrap multiple elements under one parent element
         - Use className instead of class
           <div className='test'></div>
         - Self-closing tags either require / in the end, or a closing tag
