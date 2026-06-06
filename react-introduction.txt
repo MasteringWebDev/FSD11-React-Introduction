@@ -161,7 +161,7 @@
           - Helps react identify elements uniquely
           - Improves reconciliation performance
 
-    - Render: React executes the component function and determines what UI should be displayed (JSX -> HTML + loaded in the broswer)
+    - Render: React executes the component function and determines what UI should be displayed (JSX -> HTML loaded in the broswer)
 
     - React component can have 2 types of data ***:
       1. Props: Data received from the Parent component
