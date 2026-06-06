@@ -202,3 +202,9 @@
       - Rules:
         - Never update the state directly (use stateHandler)
         - Component re-renders on state changes automatically if done using stateHandler
+
+      - State Handler is asynchronous in nature
+        - State updates are scheduled by React
+        - State does not update synchronously/immediately
+        - Hence, whenever the next state handler needs the updated state from the previous state handler, use callback syntax
+          - stateHandler((prevState) => prevState + 1)

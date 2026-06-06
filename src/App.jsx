@@ -6,6 +6,7 @@ import './App.css'
 // import Student2 from './components/Student2'
 // import Student from './components/Student'
 // import Employee from './components/Employee'
+import Count from './components/Count'
 
 function App() {
   // const arr = ['Kibbe', 'Jesse', 'Sonny', 'Dara', 'Nick']
@@ -18,43 +19,30 @@ function App() {
   //   console.log('Number: ', number)
   // }
 
-  let [count, setCount] = useState(0)
+  // let [count, setCount] = useState(0)
 
-  function handleIncrement() {
-    setCount(count + 1)
-  }
+  // function handleIncrement() {
+  //   setCount(count + 1)
+  // }
 
-  function handleDecrement() {
-    setCount(count - 1)
-  }
+  // function handleDecrement() {
+  //   setCount(count - 1)
+  // }
+
+  // const [studentName, setStudentName] = useState('Jane')
 
   return (
     <div className='box' style={{ textAlign: 'center' }}>
-      <h1>State</h1>
+      {/* <h1>{studentName}</h1>
+      <button onClick={() => setStudentName('Lisa')}>Update student name</button> */}
+
+      <Count />
+
+
+      {/* <h1>State</h1>
       <h1>{count}</h1>
       <button onClick={handleIncrement}>Increment</button>
-      <button onClick={handleDecrement}>Decrement</button>
-      <h1>{count}</h1>
-      <h1>{count}</h1>
-      <h1>{count}</h1>
-      <h1>{count}</h1>
-      <h1>{count}</h1>
-      <h1>{count}</h1>
-      <h1>{count}</h1>
-      <h1>{count}</h1>
-      <h1>{count}</h1>
-
-
-
-
-
-
-
-
-
-
-
-
+      <button onClick={handleDecrement}>Decrement</button> */}
 
       {/* <h1>Events</h1>
       <button onClick={handleClick}>Click me</button>
